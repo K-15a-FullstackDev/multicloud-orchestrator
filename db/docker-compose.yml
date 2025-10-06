@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  pg:
+    image: postgres:16
+    container_name: mco-postgres
+    environment:
+      POSTGRES_USER: mco
+      POSTGRES_PASSWORD: mco
+      POSTGRES_DB: orchestrator
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+volumes:
+  pg_data:
