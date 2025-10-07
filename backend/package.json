@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "nodemon src/index.js",
     "start": "node src/index.js",
-    "test": "cross-env NODE_ENV=test node --experimental-vm-modules ./node_modules/jest/bin/jest.js --runInBand --detectOpenHandles",
-    "db:apply": "psql -h 127.0.0.1 -U mco -d orchestrator -f src/db/schema.sql"
+    "test": "jest --runInBand",
+    "db:apply": "node src/db/apply.js"
   },
   "dependencies": {
     "@azure/arm-subscriptions": "^5.1.0",

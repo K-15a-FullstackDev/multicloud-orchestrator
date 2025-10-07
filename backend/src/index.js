@@ -3,6 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import health from "./routes/health.js";
 import providers from "./routes/providers.js";
+import deployments from "./routes/deployments.js";
 
 dotenv.config();
 
@@ -12,6 +13,7 @@ app.use(express.json());
 
 app.use("/api", health);
 app.use("/api/providers", providers);
+app.use("/api/deployments", deployments);
 
 const port = Number(process.env.PORT || 3001);
 
