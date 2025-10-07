@@ -9,6 +9,7 @@
     "db:apply": "node src/db/apply.js"
   },
   "dependencies": {
+    "@azure/arm-consumption": "^9.2.0",
     "@azure/arm-subscriptions": "^5.1.0",
     "@azure/identity": "^4.12.0",
     "aws-sdk": "^2.1692.0",
